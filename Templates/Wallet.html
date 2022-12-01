@@ -134,7 +134,13 @@
             <div class="mr_1">
                 <div class="mr_1_1">Enter Amount</div>
                 <div class="mr_1_2">₹</div>
-                <div class="mr_1_3"><input class="paisa" id="paisa" type="number" placeholder="5000"></div>
+                <div class="mr_1_3">
+                    <form method='POST' action="">
+                        {% csrf_token %}
+                        <input class="paisa" id="paisa" type="number" name="paisa" placeholder="5000">
+                    </form>
+                
+                </div>
             </div>
             <div class="mr_2">
                 <button>+ ₹1,000</button>
